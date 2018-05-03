@@ -3,9 +3,9 @@
 
 def key_for_min_value(name_hash)
   lk = nil 
-  lv = Float::INFINITY 
+  lv = nil 
   name_hash.each do |key, value|
-  if value < lv 
+  if lv == nil || value < lv 
   lv = value 
   lk = key
 end 
